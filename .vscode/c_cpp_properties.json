@@ -1,0 +1,27 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/deps",
+                "${workspaceFolder}/srcs"
+            ],
+            "defines": [],
+            "compilerPath": "cl.exe",
+            "cStandard": "c11",
+            "cppStandard": "c++20"
+        },
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/deps",
+                "${workspaceFolder}/srcs"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/g++",
+            "cStandard": "c11",
+            "cppStandard": "c++20"
+        }
+    ],
+    "version": 4
+}

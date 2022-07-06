@@ -1,0 +1,72 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "cl.exe build",
+            "command": "cl.exe",
+            "args": [
+                "/EHsc",
+                "/Zi",
+                "/Zc:__cplusplus",
+                "/std:c++20",
+                "/I",
+                "${workspaceFolder}${pathSeparator}deps",
+                "/Fd:",
+                "${workspaceFolder}${pathSeparator}build${pathSeparator}",
+                "/Fo:",
+                "${workspaceFolder}${pathSeparator}build${pathSeparator}",
+                "/Fe:",
+                "${workspaceFolder}${pathSeparator}build${pathSeparator}${fileBasenameNoExtension}.exe",
+                "${file}",
+                "/Wall"
+            ],
+            "problemMatcher": [
+                "$msCompile"
+            ],
+            "type": "shell",
+            "group": "build"
+        },
+        {
+            "label": "g++ build",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-g",
+                "${file}",
+                "-std=c++1z",
+                "-Wall",
+                "-Wextra",
+                "-I",
+                "${workspaceFolder}${pathSeparator}deps",
+                "-o",
+                "${workspaceFolder}${pathSeparator}build${pathSeparator}${fileBasenameNoExtension}"
+            ],
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "type": "shell",
+            "group": "build"
+        },
+        {
+            "label": "clang++ build",
+            "command": "/usr/bin/clang++",
+            "args": [
+                "-g",
+                "${file}",
+                "-std=c++17",
+                "-Wall",
+                "-Wextra",
+                "-Weverything",
+                "-Wno-c++98-compat-pedantic",
+                "-I",
+                "${workspaceFolder}${pathSeparator}deps",
+                "-o",
+                "${workspaceFolder}${pathSeparator}build${pathSeparator}${fileBasenameNoExtension}"
+            ],
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "type": "shell",
+            "group": "build"
+        }
+    ]
+}

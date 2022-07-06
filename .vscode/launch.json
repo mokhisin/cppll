@@ -1,0 +1,35 @@
+{
+    "version": "2.0.0",
+    "configurations": [
+        {
+            "name": "cl.exe build and debug",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}${pathSeparator}build${pathSeparator}${fileBasenameNoExtension}.exe",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "cl.exe build"
+        },
+        {
+            "name": "g++ build and debug",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}${pathSeparator}build${pathSeparator}${fileBasenameNoExtension}",
+            "args": [],
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "g++ build"
+        },
+        {
+            "name": "clang++ build and debug",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}${pathSeparator}build${pathSeparator}${fileBasenameNoExtension}",
+            "args": [],
+            "MIMode": "gdb",
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "clang++ build"
+        }
+    ]
+}
